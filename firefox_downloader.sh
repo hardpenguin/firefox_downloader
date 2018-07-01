@@ -1,11 +1,12 @@
 #!/bin/bash
+set -e
 
 # this script is meant to download latest version of Firefox for Linux
 # then unpack it in the system-wide path
 # to put Firefox in $PATH, alternatives system is recommended
 
-ScriptName="basename $0"
-Version="0.1"
+ScriptName="$(basename $0)"
+Version="0.2"
 
 FirefoxLink="https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=pl"
 PackageFileName="firefox.tar.bz2"
@@ -26,6 +27,10 @@ then
     echo "Removing previous version..."
     rm -r "$TargetPath/$FirefoxDirectory"
 fi
+
+echo "Creating necessary directories..."
+mkdir -p "$TempPath"
+mkdir -p "$TargetPath/$FirefoxDirectory"
 
 echo "Downloading..."
 wget -q "$FirefoxLink" -O "$TempPath/$PackageFileName"

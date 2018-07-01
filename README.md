@@ -6,7 +6,6 @@ It's especially useful in distributions such as Debian Stable that currently don
 
 ## Status
 
-- untested(!)
 - basic functionality is implemented
 
 ## Todo
