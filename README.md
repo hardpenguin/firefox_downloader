@@ -6,12 +6,14 @@ It's especially useful in distributions such as Debian Stable that currently don
 
 ## Status
 
-- basic functionality is implemented
+Already implemented:
+
+- basic functionality
+- safeguards in case of problem with the target path or the archive
 
 ## Todo
 
 - alternatives system support
-- some safeguards
 - debug mode
 - support for non-root users
 - parameters support (e.g. language, temp path)
