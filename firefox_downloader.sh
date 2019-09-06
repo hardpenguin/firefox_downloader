@@ -6,7 +6,7 @@ set -e
 # to put Firefox in $PATH, alternatives system is recommended
 
 ScriptName="$(basename $0)"
-Version="0.3"
+Version="0.4"
 
 FirefoxLink="https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=pl"
 PackageFileName="firefox.tar.bz2"
@@ -19,8 +19,7 @@ TempPackage="$TempPath/$PackageFileName"
 TempFirefoxPath="$TempPath/$FirefoxDirectory"
 
 PackageContents=("firefox:application/x-executable"
-                "browser:inode/directory"
-                "plugin-container:application/x-sharedlib")
+                "browser:inode/directory")
 
 echo "$ScriptName, version $Version"
 
